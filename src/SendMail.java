@@ -24,7 +24,7 @@ public class SendMail{
 			String email=rs.getString("email");
 			int anumber=rs.getInt("account_no");
 		final String username = "gyubraj104@gmail.com"; // enter your mail id
-		final String password = "AdRaY104@/*+-;";// enter ur password
+		final String password = "*******";// enter ur password
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.starttls.enable", "true");

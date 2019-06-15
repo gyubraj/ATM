@@ -1,8 +1,22 @@
+import java.sql.Time;
+import java.time.LocalTime;
+import java.util.Calendar;
 import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) throws Exception {
+		Calendar c=Calendar.getInstance();
 		int choice;
+		int day=c.get(Calendar.DAY_OF_MONTH);
+		int hour=c.get(Calendar.HOUR);
+		int min=c.get(Calendar.MINUTE);
+		int sec=c.get(Calendar.SECOND);
+		int mse=c.get(Calendar.MILLISECOND);
+		if(day==15&&hour==00&&min==00&&sec==00&&mse==000) {
+			SendMail sm=new SendMail();
+			sm.send();
+			
+		}
 		Scanner sc=new Scanner(System.in);
 		do
 		{
@@ -86,6 +100,8 @@ public class Main {
 			
 		}
 		}while(choice!=3);
+		
+		
 	
 	}
 }
